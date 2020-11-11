@@ -16,7 +16,9 @@ class UrlController extends Controller
      */
     public function index()
     {
-        //
+        $url = Url::all();
+        return $url;
+
     }
 
     /**
@@ -37,9 +39,9 @@ class UrlController extends Controller
      */
     public function store(urlRequest $request)
     {
-        Url::create($request->all());
+        $url = Url::create($request->all());
 
-        return response("Created",Response::HTTP_CREATED);
+        return response($url,Response::HTTP_CREATED);
 //        $url = new Url();
 //        $url->original_url = $request->original_url;
 //        $url->shorten_url = $request->shorten_url;
@@ -57,7 +59,7 @@ class UrlController extends Controller
      */
     public function show(Url $url)
     {
-        //
+
     }
 
     /**

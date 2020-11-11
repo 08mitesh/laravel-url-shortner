@@ -31,7 +31,7 @@ class urlRequest extends FormRequest
     public function messages()
     {
         return [
-            "original_url.url" => "Testing"
+            "original_url.url" => "URL is not formatted"
         ];
     }
 }
